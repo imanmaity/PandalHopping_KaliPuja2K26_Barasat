@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Barasat Kali Puja Trail</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hind+Siliguri:wght@400;500;600&display=swap">
+<style>
+/* Layout: one vertical route line, pandals as numbered nodes, food stops as small amber nodes, sticky "next stop" bar at the bottom. */
+:root{
+  --bg:#EEF0F7; --surface:#FFFFFF; --fg:#191B33; --muted:#555A7D; --line:#C4C9E2;
+  --pandal:#B3205A; --pandal-soft:#F7DCE8; --food:#9A5600; --food-soft:#FBEBD0;
+  --font-display:"Bricolage Grotesque","Hind Siliguri",system-ui,sans-serif;
+  --font-body:"Hind Siliguri",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1024; --surface:#181A38; --fg:#ECEDF8; --muted:#A3A7CC; --line:#2F3363;
+  --pandal:#FF6B9D; --pandal-soft:#3A1B33; --food:#FFB347; --food-soft:#3A2C16; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1024; --surface:#181A38; --fg:#ECEDF8; --muted:#A3A7CC; --line:#2F3363;
+  --pandal:#FF6B9D; --pandal-soft:#3A1B33; --food:#FFB347; --food-soft:#3A2C16; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:15px;line-height:1.45;
+  padding-block:0 120px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+.wrap{max-width:560px;margin:0 auto}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:14px 0 10px;border-bottom:1px solid var(--line);margin-inline:-2px;padding-inline:2px}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+h1{font:800 22px/1.1 var(--font-display);margin:0;letter-spacing:-.01em;text-wrap:balance}
+.count{font:600 13px var(--font-display);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.count b{color:var(--pandal);font-size:16px}
+.bar{height:4px;background:var(--line);border-radius:2px;margin:8px 0 10px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--pandal);transition:width .25s}
+.controls{display:flex;gap:8px;flex-wrap:wrap}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.seg button{font:600 13px var(--font-body);padding:8px 12px;border:0;background:transparent;color:var(--muted);cursor:pointer;min-height:40px}
+.seg button[aria-
